@@ -3,9 +3,11 @@
 
 #include "stdafx.h"
 #include "problem01.h"
+#include "problem02.h"
 
 int _tmain(int argc, _TCHAR* argv[])
 {
     Run_Problem01();
+    Problem02::Run_Problem02();
 	return 0;
 }

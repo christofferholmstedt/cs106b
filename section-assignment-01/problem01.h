@@ -1,4 +1,4 @@
-// section_assign1_problem1.h
+// problem01.h
 #ifndef PROBLEM01_h
 #define PROBLEM01_h
 
