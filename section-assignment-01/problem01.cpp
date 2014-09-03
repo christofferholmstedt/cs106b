@@ -1,4 +1,4 @@
-// section-assignment-01.cpp : Defines the entry point for the console application.
+// section_assignment1_problem1.cpp
 //
 
 #include "stdafx.h"
@@ -46,7 +46,7 @@ string CensorStringOne(string text, string remove) {
     return return_string;
 }
 
-int _tmain(int argc, _TCHAR* argv[])
+void Run_Problem01()
 {
     string original_text;
 	string input_text;
@@ -70,5 +70,4 @@ int _tmain(int argc, _TCHAR* argv[])
          << "Output text: " << output_text << endl;
 
     getline(cin, wait_to_exit);
-	return 0;
 }
