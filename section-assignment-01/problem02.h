@@ -4,7 +4,7 @@
 
 namespace Problem02
 {
-    void Run_Problem02();
+    void Run();
 }
 
 #endif

@@ -8,6 +8,6 @@
 int _tmain(int argc, _TCHAR* argv[])
 {
     Run_Problem01();
-    Problem02::Run_Problem02();
+    Problem02::Run();
 	return 0;
 }
