@@ -19,6 +19,12 @@
     <Text Include="scores.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="alphabet.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="random_text.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -33,6 +39,9 @@
     <ClInclude Include="problem02.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="problem03.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -45,6 +54,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="problem02.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="problem03.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
