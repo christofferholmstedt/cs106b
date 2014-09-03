@@ -7,7 +7,7 @@
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-    Run_Problem01();
+    // Run_Problem01();
     Problem02::Run();
 	return 0;
 }
