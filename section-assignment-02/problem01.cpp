@@ -1,4 +1,4 @@
-// problem03.cpp 
+// problem01.cpp 
 //
 
 #include "stdafx.h"
@@ -7,7 +7,7 @@
 #include <string>
 #include <vector>
 
-namespace Problem03
+namespace Problem01
 {
 
     // Print the number of occurences of each character (in the alphabet) within the given string.
@@ -167,7 +167,7 @@ namespace Problem03
         std::string file_to_open = "scores.txt";
 
         // Start problem two
-        std::cout << "############## START OF PROBLEM 03 ####################" << std::endl 
+        std::cout << "############## START OF PROBLEM 01 ####################" << std::endl 
             << "What is the name of the file to read? (default: alphabet.txt)" << std::endl;
 
         // Get the name of the scores file from comand line
@@ -179,7 +179,7 @@ namespace Problem03
 
         CountLetters(file_to_open);
 
-        std::cout << "############## END OF PROBLEM 03 ####################" << std::endl;
+        std::cout << "############## END OF PROBLEM 01 ####################" << std::endl;
         std::getline(std::cin, wait_to_exit);
     }
 }
