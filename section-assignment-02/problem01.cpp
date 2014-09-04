@@ -26,23 +26,46 @@ namespace Problem01
     {
         std::ifstream input_file;
         std::string line;
-        std::stringstream ss;
+        std::stringstream stringStreamTemp;
         std::string field;
         char delimeter = ',';
         
         // Open the file
         input_file.open(filename);
         
-        while (input_file.good())
+        while (getline(input_file, line) && input_file.good())
         {
-            getline(input_file, line);
-            ss << line;
+            stringStreamTemp << line;
 
-            while (std::getline(ss, field, delimeter))
+            int k = 0;
+            EmailMsg tempStruct;
+            while (getline(stringStreamTemp, field, delimeter))
             {
-                std::cout << field << std::endl;
+                switch (k)
+                {
+                case 0:
+                    tempStruct.to = field;
+                    break;
+                case 1:
+                    tempStruct.from = field;
+                    break;
+                case 2:
+                    tempStruct.message = field;
+                    break;
+                case 3:
+                    tempStruct.subject = field;
+                    break;
+                case 4:
+                    tempStruct.date = atoi(field.c_str());
+                    break;
+                case 5:
+                    tempStruct.time = atoi(field.c_str());
+                    break;
+                }
+                k++;
             }
-
+            messages.push_back(tempStruct);
+            stringStreamTemp.clear();
         }
 
         // Print some warning output if the file could not be open read until EOF
@@ -53,10 +76,33 @@ namespace Problem01
 
     void removeSpam(std::vector<EmailMsg> & messages)
     {
+        std::vector<int> spamEmailsNo;
+
         for (size_t i = 0; i < messages.size(); ++i)
         {
-            std::cout << i << std::endl;
+            std::size_t temp = messages[i].subject.find("spam");
+            if (temp != std::string::npos)
+            {
+                spamEmailsNo.push_back(i);
+            }
         }
+    }
+
+    // Loop through and print all emails
+    void printEmails(std::vector<EmailMsg> & messages)
+    {
+        std::cout << "###### ALL EMAILS LISTED BELOW ######" << std::endl;
+        for (size_t i = 0; i < messages.size(); ++i)
+        {
+            std::cout << messages[i].to << ", " <<
+                         messages[i].from << ", " <<
+                         messages[i].subject << ", " <<
+                         //messages[i].message << ", " <<
+                         //messages[i].date << ", " <<
+                         //messages[i].time << ", " <<
+                         std::endl;
+        }
+        std::cout << "###### ALL EMAILS LISTED ABOVE ######" << std::endl;
     }
 
     // Start of processing
@@ -78,7 +124,9 @@ namespace Problem01
         }
 
         readMessagesFromFile(messages, file_to_open); 
+        printEmails(messages);
         removeSpam(messages);
+        printEmails(messages);
 
         std::cout << "############### END OF PROBLEM 01 #####################" << std::endl;
         std::getline(std::cin, wait_to_exit);
