@@ -1,7 +1,7 @@
 Ada@internet.com,Trixie@internet.com,"This is the message.","This is the subject",20140904,1040
 Trixie@internet.com,Ada@internet.com,"This is another message.","This is the subject",20140904,1140
-Trixie@internet.com,Ada@internet.com,"This is another message.","This is the subject",23140904,1140
+Trixie@internet.com,Ada@internet.com,"This is another message.","This SPAM is the subject",23140904,1140
 Ada@internet.com,Trixie@internet.com,"This is the message.","This is the subject",20140904,104
-Ada@internet.com,Trixie@internet.com,"This is the message.","This is the subject",20140904,1040
-Ada@internet.com,Trixie@internet.com,"This is the message.","This is the subject",20140904,1040
+Ada@internet.com,Trixie@internet.com,"This is the message.","This is the SPAM subject",20140904,1040
+Ada@internet.com,Trixie@internet.com,"This is the message.","SPAM This is the subject",20140904,1040
 

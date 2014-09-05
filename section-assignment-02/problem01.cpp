@@ -64,7 +64,10 @@ namespace Problem01
                 }
                 k++;
             }
-            messages.push_back(tempStruct);
+            if (!tempStruct.subject.empty())
+            {
+                messages.push_back(tempStruct);
+            }
             stringStreamTemp.clear();
         }
 
@@ -77,14 +80,20 @@ namespace Problem01
     void removeSpam(std::vector<EmailMsg> & messages)
     {
         std::vector<int> spamEmailsNo;
+        std::vector<EmailMsg> tempMessages; 
 
         for (size_t i = 0; i < messages.size(); ++i)
         {
-            std::size_t temp = messages[i].subject.find("spam");
+            std::size_t temp = messages[i].subject.find("SPAM");
             if (temp != std::string::npos)
             {
                 spamEmailsNo.push_back(i);
             }
+        }
+         
+        for (auto i = spamEmailsNo.rbegin(); i != spamEmailsNo.rend(); ++i)
+        {
+            messages.erase(messages.begin() + *i);
         }
     }
 
