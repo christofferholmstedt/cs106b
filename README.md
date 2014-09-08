@@ -1,5 +1,5 @@
-Some solutions to Section Handout Assignments
-=============================================
+CS106B - Solutions to Section Assignments
+=========================================
 Here are my solutions to the section assignments
 in the course CS106B from 2008 given by Julie Zelenski and made available
 through Stanford Engineering Everywhere.
